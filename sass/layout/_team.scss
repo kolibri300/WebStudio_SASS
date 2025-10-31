@@ -1,4 +1,5 @@
 @use '../base/color';
+@use '../base/typography' as t;
 .team{
     background-color: color.$ourteam;
 }

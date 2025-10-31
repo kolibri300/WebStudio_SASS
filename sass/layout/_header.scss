@@ -1,4 +1,5 @@
 @use '../base/color';
+@use '../base/typography' as t;
 .container{
     width: 1200px;
     margin: 0 auto;
@@ -21,24 +22,24 @@
 }
 .logo-web{
     color: color.$button;
-    font-family: Raleway;
+    font-family: t.$logo-font;
     font-size: 26px;
-    font-weight: 700;
+    font-weight:  t.$standart-weight;
     line-height: normal;
     letter-spacing: 0.78px;
     display: flex;
 }
 .logo-studio{
     color: color.$logocolour;
-    font-family: Raleway;
+    font-family: t.$logo-font;
     font-size: 26px;
-    font-weight: 700;
+    font-weight:  t.$standart-weight;
     line-height: normal;
     letter-spacing: 0.78px;
 }
 .nav-page{
     color: color.$standart-text;
-    font-size: 14px;
+    font-size:  t.$standart-font-size;
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.28px;
@@ -51,7 +52,7 @@
 }
 .div-contact{
     color: color.$add-information;
-    font-size: 14px;
+    font-size:  t.$standart-font-size;
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.28px;
@@ -61,8 +62,8 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     &:hover{
         color: color.$button;
-        font-family: Roboto;
-        font-size: 14px;
+        font-family: t.$standart-font;
+        font-size:  t.$standart-font-size;
         font-style: normal;
         font-weight: 500;
         line-height: normal;

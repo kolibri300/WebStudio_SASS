@@ -1,4 +1,5 @@
 @use '../base/color';
+@use '../base/typography' as t;
 footer{
     background-color: color.$header-fotter;
 }
@@ -8,14 +9,14 @@ footer{
 }
 .footer-location{
     color: color.$h1text;
-    font-size: 14px;
+    font-size:  t.$standart-font-size;
     font-weight: 400;
     line-height: 1.71429; 
     letter-spacing: 0.42px;
 }
 .footer-contact{
     color: rgba(255, 255, 255, 0.60);
-    font-size: 14px;
+    font-size:  t.$standart-font-size;
     font-style: normal;
     font-weight: 400;
     line-height: 1.71429;
@@ -23,9 +24,9 @@ footer{
 }
 .logo-studio-footer{
     color: color.$h1text;
-    font-family: Raleway;
+    font-family: t.$logo-font;
     font-size: 26px;
-    font-weight: 700;
+    font-weight:  t.$standart-weight;
     line-height: normal;
     letter-spacing: 0.78px;
 }
@@ -37,8 +38,8 @@ footer{
 }
 .footer-sites-h2{
     color: color.$h1text;
-    font-size: 14px;
-    font-weight: 700;
+    font-size:  t.$standart-font-size;
+    font-weight:  t.$standart-weight;
     letter-spacing: 0.42px;
     text-transform: uppercase;
     padding-top: 72px;
@@ -78,8 +79,8 @@ footer{
 }
 .footer-telegram-p{
     color: color.$h1text;
-    font-size: 14px;
-    font-weight: 700;
+    font-size:  t.$standart-font-size;
+    font-weight:  t.$standart-weight;
     letter-spacing: 0.42px;
     text-transform: uppercase;
 
@@ -91,9 +92,9 @@ footer{
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 
     color:color.$h1text;
-    font-family: Roboto;
+    font-family: t.$standart-font;
     font-size: 16px;
-    font-weight: 700;
+    font-weight:  t.$standart-weight;
     line-height: 1.87;
     letter-spacing: 0.96px;
     display: flex;
@@ -111,7 +112,7 @@ footer{
     background: rgba(33, 150, 243, 0.00);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 
-    font-family: Roboto;
+    font-family: t.$standart-font;
 
     padding-left: 16px;
 

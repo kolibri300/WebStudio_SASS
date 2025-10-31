@@ -1,4 +1,5 @@
 @use '../base/color';
+@use '../base/typography' as t;
 .work-ul{
     display: flex;
     justify-content: space-between;
@@ -12,7 +13,7 @@
     color: color.$standart-text;
     text-align: center;
     font-size: 36px;
-    font-weight: 700;
+    font-weight:  t.$standart-weight;
     line-height: normal;
     letter-spacing: 1.08px;
 }
@@ -37,8 +38,8 @@
     position: absolute;
 
     color: color.$h1text;
-    font-size: 14px;
-    font-weight: 700;
+    font-size:  t.$standart-font-size;
+    font-weight:  t.$standart-weight;
     letter-spacing: 0.42px;
     text-transform: uppercase;
 

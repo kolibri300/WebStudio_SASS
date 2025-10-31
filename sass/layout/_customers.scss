@@ -1,4 +1,5 @@
 @use '../base/color';
+@use '../base/typography' as t;
 .customers{
     display: flex;
     align-items: center;
@@ -9,7 +10,7 @@
 .customers-h2{
     color: color.$standart-text;
     font-size: 36px;
-    font-weight: 700;
+    font-weight:  t.$standart-weight;
     letter-spacing: 1.08px;
 }
 .customers-ul{

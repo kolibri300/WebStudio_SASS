@@ -1,4 +1,5 @@
 @use '../base/color';
+@use '../base/typography' as t;
 .deicsion{
     background-color: color.$header-fotter;
     padding-bottom: 200px;
@@ -28,7 +29,7 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     color: color.$h1text;
     font-size: 16px;
-    font-weight: 700;
+    font-weight:  t.$standart-weight;
     line-height: 1.875;
     letter-spacing: 0.96px;
     padding: 10px 32px;
