@@ -1,0 +1,49 @@
+@use '../base/color';
+.customers{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 94px 0;
+}
+
+.customers-h2{
+    color: color.$standart-text;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1.08px;
+}
+.customers-ul{
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+}
+.customers-a{
+    padding: 16px 32px;
+    border-radius: 4px;
+    border: 1px solid #AFB1B8;
+    display: block;
+    width: 170px;
+    height: 92px;
+    
+    transition-property: background-color, box-shadow, color, border, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover{
+    border: 1px solid color.$button;
+        & .customers-svg{
+            fill: color.$button;
+        }
+    }
+}
+.customers-svg{
+    width: 106px;
+    height: 60px;
+    fill: #AFB1B8;
+}
+.customers-svg{
+    
+    transition-property: background-color, box-shadow, color, border, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

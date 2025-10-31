@@ -1,0 +1,30 @@
+@use '../base/color';
+.prefer-ul{
+    display: flex;
+    padding: 94px 0;
+    column-gap:30px;
+    justify-content: center;
+}
+.prefer-title{
+    color: color.$standart-text;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    margin: 0 0 0 0;
+}
+.prefer-text{
+    color: color.$add-information;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71429;
+    letter-spacing: 0.42px;
+}
+.prefer-svg{
+    width: 270px;
+    height: 120px;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+    background-color: color.$ourteam;
+}

@@ -1,0 +1,48 @@
+@use '../base/color';
+.work-ul{
+    display: flex;
+    justify-content: space-between;
+}
+.work-img{
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+.work-title,.team-title{
+    color: color.$standart-text;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.08px;
+}
+.work-title{
+    display: flex;
+    margin: 0 auto;
+    width: 366.8px;
+    padding-bottom: 50px;
+}
+.work-li{
+    position: relative;
+    &:hover {
+        animation: swing 1s;
+        animation-fill-mode: both;
+    }
+}
+.work-li-text{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 27px 0;
+    position: absolute;
+
+    color: color.$h1text;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+
+    background: rgba(47, 48, 58, 0.80);
+
+    bottom: 0;
+}

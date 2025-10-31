@@ -1,0 +1,197 @@
+@use '../base/color';
+.background{
+    position: fixed;
+    top: 0;
+    height: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.20);
+}
+.modalca{
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    border-radius: 4px;
+    background: #FFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px 0 rgba(0, 0, 0, 0.20);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    & input{
+    width: 448px;
+    height: 40px;
+    padding-left: 40px;
+    margin-top: 4px;
+    
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.20);
+}
+}
+.modalca, .background
+{
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: 
+    cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-label{
+    display: flex;
+    flex-direction: column;
+    padding: 0 39px 0 41px;
+}
+.form-div{
+    display: flex;
+    align-items: center;
+    gap: 8.38px;
+    justify-content: center;
+    margin-top: 10px;
+}
+.form-text{
+    color: #212121;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.6px;text-align: center;
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-checkbox[type="checkbox"]{
+    width: 16px;
+    height: 15px;
+    margin-top: 0;
+}
+.form-checkbox-text{
+    color: color.$add-information;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+}
+.form-checkbox-text a{
+    color: color.$button;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    cursor: pointer;
+}
+.form-brn{
+    border-radius: 4px;
+    background: color.$button;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    color: color.$h1text;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.96px;
+    padding: 10px 52px;
+    border: none;
+    margin-top: 20px;
+}
+.form-brn-div{
+    display: flex;
+    justify-content: center;
+    ;
+}
+.form-label{
+    & textarea{
+        width: 448px;
+        height: 120px;
+        padding: 12px 16px;
+        margin-top: 4px;
+        font-family: Roboto;
+        border-radius: 4px;
+        border: 1px solid rgba(33, 33, 33, 0.20);
+        
+        
+        transition-property: background-color, box-shadow, color, border, fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &:focus,&:hover{
+    
+            outline: none; 
+            border: 1px solid color.$button;
+        }
+    }
+    & input{
+
+        transition-property: background-color, box-shadow, color, border, fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,&:focus{
+            outline: none; 
+            border: 1px solid color.$button;
+            &+svg{
+                fill: color.$button;
+            }
+        }
+        &+svg{
+            
+            transition-property: background-color, box-shadow, color, border, fill;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+    
+}
+.form>label{
+    color: color.$add-information;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12px;
+    position: relative;
+    
+}
+.modalca-svg{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 29px;
+    left: 55px;
+}
+.modalca-svg-close{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    right: 8px;
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    & svg{
+        width: 25px;
+        height: 25px;
+        
+        transition-property: background-color, box-shadow, color, border, fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &:hover svg{
+        fill: color.$button;
+    }
+}
+.is-hidden{
+    opacity: 0;
+  pointer-events: none;
+}
+.no-scroll{
+    overflow: hidden;
+}
+textarea{
+  resize: none;
+}

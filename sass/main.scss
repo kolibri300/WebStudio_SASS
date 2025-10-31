@@ -1,12 +1,13 @@
-@import "base/color";
-@import "base/reset";
-@import "base/typography";
-@import "layout/header";
-@import "layout/footer";
-@import "layout/customers";
-@import "layout/decision";
-@import "layout/portfolio";
-@import "layout/prefer";
-@import "layout/team";
-@import "layout/work";
+@use "base/color";
+@use "base/reset";
+@use "base/typography";
+@use "layout/header";
+@use "layout/footer";
+@use "layout/customers";
+@use "layout/decision";
+@use "layout/portfolio";
+@use "layout/prefer";
+@use "layout/team";
+@use "layout/work";
+@use "layout/modalca";
 

@@ -1,0 +1,86 @@
+@use '../base/color';
+.team{
+    background-color: color.$ourteam;
+}
+.team-title{
+    display: flex;
+    padding-left: 453px;
+    margin: 0 0 0 0;
+    padding-bottom: 50px;
+    padding-top: 94px;
+}
+.team-li{
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
+}
+.team-name{
+    color: color.$standart-text;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;    
+    letter-spacing: 0.48px; 
+}
+.team-work{
+    color: color.$add-information;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.48px;
+}
+.team-ul{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 94px;
+    column-gap: 30px;
+}
+.team-li{
+    background-color: color.$h1text;
+}
+.team-image{
+    padding-bottom: 30px;
+}
+.team-name{
+    padding-bottom: 10px;
+}
+.team-work{
+    padding-bottom: 30px;
+}
+.team-svg-ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 32px 30px;
+    gap: 10px;
+}
+.team-svg{
+    padding: 12px;
+    width: 44px;
+    height: 44px;
+    fill: #AFB1B8;
+}
+.team-svg-a{
+    border-radius: 100%;
+    display: block;
+    width: 44px;
+    height: 44px;
+    
+    transition-property: background-color, box-shadow, color, border, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover{
+        background-color: color.$button;
+        border-radius: 100%;
+        display: block;
+        width: 44px;
+        height: 44px;
+        & svg{
+            fill: color.$h1text;
+        }
+    }
+    & svg{
+        transition-property: background-color, box-shadow, color, border, fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
