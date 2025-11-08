@@ -1,5 +1,6 @@
 @use '../base/color';
 @use '../base/typography' as t;
+@use '../utils/mixin' as m;
 .container{
     width: 1200px;
     margin: 0 auto;
@@ -43,7 +44,7 @@
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.28px;
-    transition-property: background-color, box-shadow, color, border;
+    @include m.transition(none);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     &:hover{
@@ -57,9 +58,7 @@
     line-height: normal;
     letter-spacing: 0.28px;
     display: flex;
-    transition-property: background-color, box-shadow, color, border;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include m.transition(none);
     &:hover{
         color: color.$button;
         font-family: t.$standart-font;
@@ -86,9 +85,7 @@
     position: relative;
     color: color.$button;
     
-    transition-property: background-color, box-shadow, color, border, fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include m.transition(fill);
     &::after{
         content: "";
         display: block;

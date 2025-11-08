@@ -1,5 +1,6 @@
 @use '../base/color';
 @use '../base/typography' as t;
+@use '../utils/mixin' as m;
 footer{
     background-color: color.$header-fotter;
 }
@@ -60,9 +61,7 @@ footer{
     border-radius: 100%;
 
     
-    transition-property: background-color, box-shadow, color, border, fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include m.transition(fill);
 
     &:hover{
         background-color: color.$button;

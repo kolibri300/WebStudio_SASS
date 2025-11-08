@@ -1,14 +1,9 @@
 @use '../base/color';
 @use '../base/typography' as t;
+@use '../utils/mixin' as m;
+@use '../utils/placeholder';
 .team{
     background-color: color.$ourteam;
-}
-.team-title{
-    display: flex;
-    padding-left: 453px;
-    margin: 0 0 0 0;
-    padding-bottom: 50px;
-    padding-top: 94px;
 }
 .team-li{
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
@@ -34,6 +29,13 @@
     justify-content: space-between;
     padding-bottom: 94px;
     column-gap: 30px;
+}
+.team-title{
+    @extend %main-h2-text;
+    
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 94px;
 }
 .team-li{
     background-color: color.$h1text;
@@ -66,9 +68,7 @@
     width: 44px;
     height: 44px;
     
-    transition-property: background-color, box-shadow, color, border, fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include m.transition(fill);
     &:hover{
         background-color: color.$button;
         border-radius: 100%;
@@ -80,8 +80,6 @@
         }
     }
     & svg{
-        transition-property: background-color, box-shadow, color, border, fill;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include m.transition(fill);
     }
 }

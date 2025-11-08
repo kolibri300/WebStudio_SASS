@@ -1,5 +1,6 @@
 @use '../base/color';
 @use '../base/typography' as t;
+@use '../utils/mixin' as m;
 .background{
     position: fixed;
     top: 0;
@@ -117,9 +118,7 @@
         border: 1px solid rgba(33, 33, 33, 0.20);
         
         
-        transition-property: background-color, box-shadow, color, border, fill;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include m.transition(fill);
         &:focus,&:hover{
     
             outline: none; 
@@ -128,7 +127,7 @@
     }
     & input{
 
-        transition-property: background-color, box-shadow, color, border, fill;
+        @include m.transition(fill);
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         &:hover,&:focus{
@@ -140,9 +139,8 @@
         }
         &+svg{
             
-            transition-property: background-color, box-shadow, color, border, fill;
-            transition-duration: 250ms;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            
+            @include m.transition(fill);
         }
     }
     
@@ -178,9 +176,7 @@
         width: 25px;
         height: 25px;
         
-        transition-property: background-color, box-shadow, color, border, fill;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include m.transition(fill);
     }
     &:hover svg{
         fill: color.$button;

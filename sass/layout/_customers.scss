@@ -1,4 +1,6 @@
 @use '../base/color';
+@use '../utils/placeholder';
+@use '../utils/mixin' as m;
 @use '../base/typography' as t;
 .customers{
     display: flex;
@@ -8,10 +10,7 @@
 }
 
 .customers-h2{
-    color: color.$standart-text;
-    font-size: 36px;
-    font-weight:  t.$standart-weight;
-    letter-spacing: 1.08px;
+    @extend %main-h2-text;
 }
 .customers-ul{
     display: flex;
@@ -25,10 +24,7 @@
     display: block;
     width: 170px;
     height: 92px;
-    
-    transition-property: background-color, box-shadow, color, border, fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include m.transition(fill);
 
     &:hover{
     border: 1px solid color.$button;
@@ -44,7 +40,5 @@
 }
 .customers-svg{
     
-    transition-property: background-color, box-shadow, color, border, fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include m.transition(fill);
 }

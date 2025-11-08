@@ -125,7 +125,9 @@ body {
   font-weight: 500;
   line-height: normal;
   letter-spacing: 0.28px;
-  transition-property: background-color, box-shadow, color, border;
+  transition-property: background-color, box-shadow, color, border, none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -140,7 +142,7 @@ body {
   line-height: normal;
   letter-spacing: 0.28px;
   display: flex;
-  transition-property: background-color, box-shadow, color, border;
+  transition-property: background-color, box-shadow, color, border, none;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -351,18 +353,18 @@ footer {
   height: 24px;
 }
 
+.work-title, .team-title, .customers-h2 {
+  color: #212121;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 1.08px;
+}
+
 .customers {
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 94px 0;
-}
-
-.customers-h2 {
-  color: #212121;
-  font-size: 36px;
-  font-weight: 700;
-  letter-spacing: 1.08px;
 }
 
 .customers-ul {
@@ -459,6 +461,8 @@ footer {
   border: none;
   flex-shrink: 0;
   transition-property: background-color, box-shadow, color, border, stroke;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -589,14 +593,6 @@ footer {
   background-color: #f5f4fa;
 }
 
-.team-title {
-  display: flex;
-  padding-left: 453px;
-  margin: 0 0 0 0;
-  padding-bottom: 50px;
-  padding-top: 94px;
-}
-
 .team-li {
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
 }
@@ -625,6 +621,12 @@ footer {
   padding-bottom: 94px;
   -moz-column-gap: 30px;
        column-gap: 30px;
+}
+
+.team-title {
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 94px;
 }
 
 .team-li {
@@ -694,19 +696,8 @@ footer {
   max-width: 100%;
 }
 
-.work-title, .team-title {
-  color: #212121;
-  text-align: center;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 1.08px;
-}
-
 .work-title {
-  display: flex;
-  margin: 0 auto;
-  width: 366.8px;
+  text-align: center;
   padding-bottom: 50px;
 }
 
@@ -867,6 +858,8 @@ footer {
 }
 .form-label input {
   transition-property: background-color, box-shadow, color, border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
