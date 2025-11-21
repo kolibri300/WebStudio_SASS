@@ -2,7 +2,14 @@
 @use '../base/typography' as t;
 %main-h2-text{
     color: color.$standart-text;
-    font-size: 36px;
     font-weight:  t.$standart-weight;
-    letter-spacing: 1.08px;
+    @media screen and (min-width:480px){
+        letter-spacing: 1.03px;
+        font-size: 28px;
+    }
+    @media screen and (min-width:1200px){
+        font-size: 36px;
+        letter-spacing: 1.08px;
+            
+    }
 }

@@ -2,43 +2,89 @@
 @use '../utils/placeholder';
 @use '../utils/mixin' as m;
 @use '../base/typography' as t;
+
+$width: 0px;
 .customers{
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 94px 0;
+    padding-top: 94px;
+    padding-bottom: 94px;
+     @media screen and (min-width:320px){
+        
+        padding-top: 60px;
+        padding-bottom: 60px;
+        .customers-ul{
+            display: flex;
+            flex-wrap: wrap;
+            gap:30px;
+            justify-content: center;
+            padding-top: 30px;
+        }
+        .customers-a{
+            padding: 16px 51px;
+            border-radius: 4px;
+            border: 1px solid #AFB1B8;
+            display: block;
+            @include m.transition(fill);
+
+            &:hover{
+            border: 1px solid color.$button;
+                & .customers-svg{
+                    fill: color.$button;
+                }
+            }
+        }
+        .customers-svg{
+            width: 106px;
+            height: 60px;
+            fill: #AFB1B8;
+        }
+        .customers-svg{
+            
+            @include m.transition(fill);
+        }
+    }
+    @media screen and (min-width:768px){
+        .customers-a{
+            padding: 16px 59px;}
+    }
+    @media screen and (min-width:1200px){
+        
+        .customers-ul{
+            display: flex;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .customers-a{
+            padding: 16px 32px;
+            border-radius: 4px;
+            border: 1px solid #AFB1B8;
+            display: block;
+            width: 170px;
+            height: 92px;
+            @include m.transition(fill);
+
+            &:hover{
+            border: 1px solid color.$button;
+                & .customers-svg{
+                    fill: color.$button;
+                }
+            }
+        }
+        .customers-svg{
+            width: 106px;
+            height: 60px;
+            fill: #AFB1B8;
+        }
+        .customers-svg{
+            
+            @include m.transition(fill);
+        }
+
+    }
 }
 
 .customers-h2{
     @extend %main-h2-text;
-}
-.customers-ul{
-    display: flex;
-    gap: 30px;
-    margin-top: 50px;
-}
-.customers-a{
-    padding: 16px 32px;
-    border-radius: 4px;
-    border: 1px solid #AFB1B8;
-    display: block;
-    width: 170px;
-    height: 92px;
-    @include m.transition(fill);
-
-    &:hover{
-    border: 1px solid color.$button;
-        & .customers-svg{
-            fill: color.$button;
-        }
-    }
-}
-.customers-svg{
-    width: 106px;
-    height: 60px;
-    fill: #AFB1B8;
-}
-.customers-svg{
-    
-    @include m.transition(fill);
 }

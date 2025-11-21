@@ -1,85 +1,169 @@
 @use '../base/color';
 @use '../base/typography' as t;
 @use '../utils/mixin' as m;
-@use '../utils/placeholder';
+@use '../utils/placeholder' as pl;
 .team{
     background-color: color.$ourteam;
-}
-.team-li{
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
-}
-.team-name{
-    color: color.$standart-text;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: normal;    
-    letter-spacing: 0.48px; 
-}
-.team-work{
-    color: color.$add-information;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.48px;
-}
-.team-ul{
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 94px;
-    column-gap: 30px;
+    @media screen and (min-width:320px){
+        .team-li{
+            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
+        }
+        .team-name{
+            color: color.$standart-text;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: normal;    
+            letter-spacing: 0.48px; 
+        }
+        .team-work{
+            color: color.$add-information;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.48px;
+        }
+        .team-ul{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 60px;
+            gap: 30px;
+            flex-wrap: wrap
+        }
+        .team-title{
+            
+            text-align: center;
+            padding-bottom: 30px;
+            padding-top: 60px;
+        }
+        .team-li{
+            background-color: color.$h1text;
+        }
+        .team-image{
+            padding-bottom: 30px;
+        }
+        .team-name{
+            padding-bottom: 10px;
+        }
+        .team-svg-ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 32px 30px;
+            gap: 10px;
+        }
+        .team-svg{
+            padding: 12px;
+            width: 44px;
+            height: 44px;
+            fill: #AFB1B8;
+        }
+        .team-svg-a{
+            border-radius: 100%;
+            display: block;
+            width: 44px;
+            height: 44px;
+            
+            @include m.transition(fill);
+            &:hover{
+                background-color: color.$button;
+                border-radius: 100%;
+                display: block;
+                width: 44px;
+                height: 44px;
+                & svg{
+                    fill: color.$h1text;
+                }
+            }
+            & svg{
+                @include m.transition(fill);
+            }
+        }
+    }
+    @media screen and (min-width:768px){
+        .team-li{
+            width: calc((100% - 30px*1)/2);
+        }
+    }
+    @media screen and (min-width:1200px){
+        .team-li{
+            width: calc((100% - 30px*3)/4);
+            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
+        }
+        .team-name{
+            color: color.$standart-text;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: normal;    
+            letter-spacing: 0.48px; 
+        }
+        .team-work{
+            color: color.$add-information;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.48px;
+        }
+        .team-ul{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 94px;
+            column-gap: 30px;
+        }
+        .team-title{
+            
+            text-align: center;
+            padding-bottom: 50px;
+            padding-top: 94px;
+        }
+        .team-li{
+            background-color: color.$h1text;
+        }
+        .team-image{
+            padding-bottom: 30px;
+        }
+        .team-name{
+            padding-bottom: 10px;
+        }
+        .team-svg-ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 16px 32px 30px;
+            gap: 10px;
+        }
+        .team-svg{
+            padding: 12px;
+            width: 44px;
+            height: 44px;
+            fill: #AFB1B8;
+        }
+        .team-svg-a{
+            border-radius: 100%;
+            display: block;
+            width: 44px;
+            height: 44px;
+            
+            @include m.transition(fill);
+            &:hover{
+                background-color: color.$button;
+                border-radius: 100%;
+                display: block;
+                width: 44px;
+                height: 44px;
+                & svg{
+                    fill: color.$h1text;
+                }
+            }
+            & svg{
+                @include m.transition(fill);
+            }
+        }
+    }
 }
 .team-title{
     @extend %main-h2-text;
-    
-    text-align: center;
-    padding-bottom: 50px;
-    padding-top: 94px;
-}
-.team-li{
-    background-color: color.$h1text;
-}
-.team-image{
-    padding-bottom: 30px;
-}
-.team-name{
-    padding-bottom: 10px;
-}
-.team-work{
-    padding-bottom: 30px;
-}
-.team-svg-ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 16px 32px 30px;
-    gap: 10px;
-}
-.team-svg{
-    padding: 12px;
-    width: 44px;
-    height: 44px;
-    fill: #AFB1B8;
-}
-.team-svg-a{
-    border-radius: 100%;
-    display: block;
-    width: 44px;
-    height: 44px;
-    
-    @include m.transition(fill);
-    &:hover{
-        background-color: color.$button;
-        border-radius: 100%;
-        display: block;
-        width: 44px;
-        height: 44px;
-        & svg{
-            fill: color.$h1text;
-        }
-    }
-    & svg{
-        @include m.transition(fill);
-    }
 }
