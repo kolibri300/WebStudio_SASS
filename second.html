@@ -15,7 +15,7 @@
     <header class="header">
         <div class="container header-div">
         <a href="index.html" class="logo"><span class="logo-web">Web</span><span class="logo-studio">Studio</span></a>
-        <svg class="header-menu">
+        <svg class="header-menu" menu-data-modal-open>
             <use href="img/symbol-defs.svg#icon-menu"></use>
         </svg>
         <nav class="nav">
@@ -215,5 +215,51 @@
         </div>
     </div>
     </footer>
+    <div menu-data-modal class="burger-menu is-hidden">
+        <nav class="burger-nav">
+            <ul class="burger-nav-ul">
+                <li class="burger-nav-li">
+                    <a href="index.html" class="burger-nav-page choosen">Студія</a>
+                </li>
+                <li class="burger-nav-li">
+                    <a href="#" class="burger-nav-page">Портфоліо</a>
+                </li>
+                <li class="burger-nav-li">
+                    <a href="#" class="burger-nav-page">Контакти</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="burger-div">
+                
+            <a href="tel:+380961111111" class="burger-div-contact-num">
+                +38 096 111 11 11</a>
+            <a href="mailto:info@gevstudio.com" class="burger-div-contact-em">
+                info@gevstudio.com
+            </a>
+            <ul class="burger-sites">
+                <li class="burger-sites-li">
+                    <a class="burger-sites-a" href="Instagram.com">Instagram</a>
+                    <div class="burger-sites-line"></div>
+                </li>
+                <li class="burger-sites-li">
+                    <a class="burger-sites-a" href="x.com">Twitter</a>
+                    <div class="burger-sites-line"></div>
+                </li>
+                <li class="burger-sites-li">
+                    <a class="burger-sites-a" href="Facebook.com">Facebook</a>
+                    <div class="burger-sites-line"></div>
+                </li>
+                <li class="burger-sites-li">
+                    <a class="burger-sites-a" href="LinkedIn.com">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+        <div class="burger-svg-close" menu-data-modal-close>
+                <svg>
+                    <use href="img/symbol-defs.svg#icon-close"></use>
+                </svg>
+            </div>
+    </div>
+    <script src="js/menu.js"></script>
 </body>
 </html>
